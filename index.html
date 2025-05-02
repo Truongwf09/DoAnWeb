@@ -1,66 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"  href ="./css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HomePage</title>
+  <link rel="stylesheet" href="./css/main.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div id="container">    
-        <div id="header">
-            <div><img src="./image/logo.png" alt="" width="300px" height ="300px"></div>
-            <div class="Action"> 
-                <table>
-                    <td>
-                        <ul>
-                            <li><a href ="#">ĐẶT VÉ NGAY</a></li>
-                            <li><a href ="#">ĐẶT BẮP NGAY</a></li>
-                        </ul>
-                    </td>
-                </table>
-            </div>
-            <td class="search-box">
-                    <table>
-                        <td><input type="text" name="" id="" placeholder="Nhập từ cần tìm kiếm" width="100%" height ="100%"></td>
-                        <td><img src ="./image/ic-header-search.svg" ></td>
-                    </table>
-             </td>
+    <header>
+      <div id="header">
+        <div><h1>TICKETBOX</h1></div>
+        <div class="Action"> 
+          <ul>
+            <li><a href="#">ĐẶT VÉ</a></li>
+            <li><a href="#">MUA BẮP</a></li>
+          </ul>
         </div>
-        <div id="menu">
-            <table>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="#" >TRANG CHỦ</a>
-                        </li>
-                        <li>
-                            <a href="#">GIỚI THIỆU</a>
-                        </li>
-                        <li>
-                            <a href="#">DỊCH VỤ</a>
-                        </li>
-                        <li>
-                            <a href="#">HỖ TRỢ</a>
-                        </li>
-                        <li>
-                            <a href="#" >LIÊN HỆ</a>
-                        </li>
-                    </ul>
-                </td>
+        <div class="search-box">
+          <input type="text" placeholder="Tìm phim, rạp, suất chiếu..."/>
+          <img src="./image/ic-header-search.svg" alt="search" width="24" height="24"/>
         </div>
-        <div id="footer">
-            <table>
-                <tr>
-                    <td>Họ tên: Nguyễn Hồng Quốc Trường</td>
-                    <td>Đồ Án Thầy Nghĩa abcdxyz</td>
-                </tr>
-                <tr>
-                    <td>MSSV: DH52201679</td>
-                    <td>Ca: T2 ca1</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</body>
+      </div>
+  
+      <div id="menu">
+        <ul>
+          <li><a href="trangchu.html" target="frame_content">TRANG CHỦ</a></li>
+          <li><a href="#">PHIM</a></li>
+          <li><a href="#">LỊCH CHIẾU</a></li>
+          <li><a href="uudai.html" target="frame_content">ƯU ĐÃI</a></li>
+          <li><a href="lienhe.html" target="frame_content">LIÊN HỆ</a></li>
+          <li><a href="#">LAB THỰC HÀNH</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div id="content-2">
+        <iframe src ="trangchu.html" frameborder="0" width="100%" height="100%" name="frame_content" ></iframe>
+      </div>
+    </main>
+    
+  
+    <footer>
+      <div id="footer">
+        <table>
+          <tr>
+            <td>Họ tên: Nguyễn Hồng Quốc Trường</td>
+            <td>Gmail:dh52210679@student.stu.edu.vn</td>
+          </tr>
+          <tr>
+            <td>MSSV: DH52201679</td>
+            <td>Ca học: Thứ 2 - Ca 2</td>  
+          </tr>
+        </table>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chu</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div id="content">
+          <ul class="trangchu">
+            <li>
+              <a href="#"><i class="fas fa-map-marker-alt"></i> Chọn rạp</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-calendar-alt"></i> Lịch chiếu</a>
+            </li>
+          </ul> 
+        </div>
+        <div class="banner-slider" style="height:700px">
+          <div class="slides">
+            <img src="./image/hinh1.jpg" class="slide active" alt="Banner 1">
+            <img src="./image/hinh2.jpg" class="slide" alt="Banner 2">
+            <img src="./image/hinh3.jpg" class="slide" alt="Banner 3">
+          </div>
+        </div>
+        <section class="movie-list">
+          <h2>PHIM ĐANG CHIẾU</h2>
+          <div class="movies">
+            <div class="movie-item" data-film="0">
+              <img src="./image/latmat8.jpg" alt="Lật Mặt 8" />
+              <h3>Lật Mặt 8: Tấm Vé Định Mệnh</h3>
+              <div class="movie-buttons">
+                <button class="btn-detail">Chi tiết</button>
+                <a href="#" class="btn-book">Đặt vé</a>
+              </div>
+            </div>
+        
+            <div class="movie-item" data-film="1">
+              <img src="./image/tham-tu-kien.jpg" alt="Thám Tử Kiên" />
+              <h3>Thám Tử Kiên</h3>
+              <div class="movie-buttons">
+                <button class="btn-detail">Chi tiết</button>
+                <a href="#" class="btn-book">Đặt vé</a>
+              </div>
+            </div>
+        
+            <div class="movie-item" data-film="2">
+              <img src="./image/gia-tai-cua-ngoai.jpg" alt="Gia Tài Của Ngoại" />
+              <h3>Gia Tài Của Ngoại</h3>
+              <div class="movie-buttons">
+                <button class="btn-detail">Chi tiết</button>
+                <a href="#" class="btn-book">Đặt vé</a>
+              </div>
+            </div>
+        
+            <div class="movie-item" data-film="3">
+              <img src="./image/nhung-ga-trai-hu.jpg" alt="Những Gã Trai Hư" />
+              <h3>Những Gã Trai Hư: Chơi Hay Bị Xơi</h3>
+              <div class="movie-buttons">
+                <button class="btn-detail">Chi tiết</button>
+                <a href="#" class="btn-book">Đặt vé</a>
+              </div>
+            </div>
+        
+            <div class="movie-item" data-film="4">
+              <img src="./image/linh-hon-vu-nu.jpg" alt="Linh Hồn Vũ Nữ 2" />
+              <h3>Linh Hồn Vũ Nữ 2: Nghi Thức Hồi Sinh</h3>
+              <div class="movie-buttons">
+                <button class="btn-detail">Chi tiết</button>
+                <a href="#" class="btn-book">Đặt vé</a>
+              </div>
+            </div>
+        
+            <div class="movie-item" data-film="5">
+              <img src="./image/mong-vuot.jpg" alt="Móng Vuốt" />
+              <h3>Móng Vuốt</h3>
+              <div class="movie-buttons">
+                <button class="btn-detail">Chi tiết</button>
+                <a href="#" class="btn-book">Đặt vé</a>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Popup chi tiết -->
+          <div id="popup-detail" class="popup">
+            <div class="popup-content">
+              <h3 id="popup-title">Chi tiết phim</h3>
+              <p id="popup-description">Mô tả chi tiết phim...</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <script src="./js/main.js"></script>
+</body>
+</html>
