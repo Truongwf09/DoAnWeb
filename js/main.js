@@ -51,27 +51,59 @@ document.addEventListener("DOMContentLoaded", function () {
   const popupTitle = document.getElementById("popup-title");
   const popupDescription = document.getElementById("popup-description");
 
-  detailButtons.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const movieTitle = this.closest(".movie-item").querySelector("h3").innerText;
-      const details = movieDetails[movieTitle];
+  // Kiểm tra phần tử popup có tồn tại hay không
+  if (detailButtons.length && popup && popupTitle && popupDescription) {
+    detailButtons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const movieTitle = this.closest(".movie-item").querySelector("h3").innerText;
+        const details = movieDetails[movieTitle];
 
-      if (details) {
-        popupTitle.innerText = details.title;
-        popupDescription.innerText = details.description;
-      } else {
-        popupTitle.innerText = "Không có thông tin chi tiết";
-        popupDescription.innerText = "Không có thông tin cho phim này.";
-      }
+        if (details) {
+          popupTitle.innerText = details.title;
+          popupDescription.innerText = details.description;
+        } else {
+          popupTitle.innerText = "Không có thông tin chi tiết";
+          popupDescription.innerText = "Không có thông tin cho phim này.";
+        }
 
-      popup.style.display = "flex";
+        // Đảm bảo popup luôn được hiển thị khi bấm nút chi tiết
+        popup.style.display = "flex";
+        console.log("Popup đã được mở");
+      });
     });
-  });
 
-  // Đóng popup khi bấm ra ngoài
-  popup.addEventListener("click", function (e) {
-    if (e.target === popup) {
-      popup.style.display = "none";
-    }
-  });
+    // Đóng popup khi bấm ra ngoài
+    popup.addEventListener("click", function (e) {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  } else {
+    console.error("Một trong các phần tử chi tiết phim hoặc popup không tồn tại.");
+  }
+
+  // Chuyển đổi giữa các phim Đang chiếu và Sắp chiếu
+  const btnDangChieu = document.getElementById("btn-dangchieu");
+  const btnSapChieu = document.getElementById("btn-sapchieu");
+  const sectionDangChieu = document.getElementById("dangchieu");
+  const sectionSapChieu = document.getElementById("sapchieu");
+
+  // Kiểm tra phần tử chuyển đổi phim
+  if (btnDangChieu && btnSapChieu && sectionDangChieu && sectionSapChieu) {
+    btnDangChieu.addEventListener("click", () => {
+      sectionDangChieu.style.display = "block";
+      sectionSapChieu.style.display = "none";
+      btnDangChieu.classList.add("active");
+      btnSapChieu.classList.remove("active");
+    });
+
+    btnSapChieu.addEventListener("click", () => {
+      sectionDangChieu.style.display = "none";
+      sectionSapChieu.style.display = "block";
+      btnDangChieu.classList.remove("active");
+      btnSapChieu.classList.add("active");
+    });
+  } else {
+    console.error("Các nút chuyển đổi phim hoặc các phần tử không tồn tại.");
+  }
 });

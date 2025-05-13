@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/datve.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <title>Đặt Vé</title>
+</head>
+<body>
+  <div class="datve-container">
+    <h2>ĐẶT VÉ XEM PHIM</h2>
+    <form id="booking-form">
+      <label for="cinema">Chọn rạp:</label>
+      <select id="cinema">
+        <option>CineStar Quốc Thanh</option>
+        <option>CineStar Hai Bà Trưng</option>
+        <option>Galaxy Quận 8</option>
+        <option>CineStar Quận 8</option>
+        <option>BHD SATRA</option>
+        <option>Đống Đa Cinema</option>
+      </select>
+
+      <label for="movie">Chọn phim:</label>
+      <select id="movie">
+        <option value="Dune">Thám Tử Kiên</option>
+        <option value="Godzilla">Lặt Mặt 8</option>
+        <option value="Kungfu">Móng Vuốt</option>
+      </select>
+
+      <label for="showtime">Suất chiếu:</label>
+      <select id="showtime">
+        <!-- JS sẽ cập nhật -->
+      </select>
+
+      <label for="quantity">Số lượng vé:</label>
+      <input type="number" id="quantity" min="1" max="10" value="1" />
+
+      <button type="submit">Đặt vé</button>
+    </form>
+
+    <div class="invoice" id="invoice" style="display: none;">
+      <h3>HÓA ĐƠN</h3>
+      <p><strong>Rạp:</strong> <span id="inv-cinema"></span></p>
+      <p><strong>Phim:</strong> <span id="inv-movie"></span></p>
+      <p><strong>Suất chiếu:</strong> <span id="inv-showtime"></span></p>
+      <p><strong>Số lượng vé:</strong> <span id="inv-quantity"></span></p>
+      <p><strong>Giá vé:</strong> <span id="inv-total"></span> VNĐ</p>
+      <button id="download-btn">Tải ảnh hóa đơn</button>
+    </div>
+  </div>
+
+  <script src="./js/datve.js"></script>
+  <script src="./js/lichchieu.js"></script>
+</body>
+</html>

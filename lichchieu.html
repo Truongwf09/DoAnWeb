@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lịch Chiếu</title>
+  <link rel="stylesheet" href="./css/lichchieu.css" />
+</head>
+<body>
+  <div class="schedule-container">
+    <h2>LỊCH CHIẾU PHIM</h2>
+
+    <div class="date-selector">
+      <button class="date-btn active" data-date="2025-05-10">10/05</button>
+      <button class="date-btn" data-date="2025-05-11">11/05</button>
+      <button class="date-btn" data-date="2025-05-12">12/05</button>
+    </div>
+
+    <div class="movie-showtimes" id="showtimes">
+      <!-- Nội dung sẽ được JS đổ vào -->
+    </div>
+
+    <div class="seat-selection" id="seat-selection" style="display:none;">
+      <h3>Chọn ghế</h3>
+      <div class="seats" id="seats"></div>
+      <button id="confirm-seat">Xác nhận</button>
+      <a href="datve.html?phim=Dune:%20Hành%20Tinh%20Cát&ngay=10/05/2025&suat=10:00" id="seats" class="btn-book"><button id="confirm-seat"> Đặt vé</a></button>
+    </div>
+  </div>
+
+  <script src="./js/lichchieu.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* Reset và cấu hình cơ bản */
+/* ---------- RESET & CƠ BẢN ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +9,10 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
   color: #333;
+  height: auto;
 }
 
-/* Header */
+/* ---------- HEADER ---------- */
 #header {
   display: flex;
   align-items: center;
@@ -23,7 +24,7 @@ body {
 }
 
 #header img {
-  width: 50px;
+  width: auto;
   height: auto;
 }
 
@@ -48,6 +49,7 @@ body {
 }
 
 .search-box {
+  width:auto;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -60,7 +62,7 @@ body {
   border: 1px solid #ccc;
 }
 
-/* Menu */
+/* ---------- MENU ---------- */
 #menu {
   background-color: #333;
 }
@@ -84,7 +86,7 @@ body {
   color: #f4e0ce;
 }
 
-/* Nội dung trang chủ */
+/* ---------- NỘI DUNG TRANG ---------- */
 #content {
   padding: 30px 50px;
 }
@@ -106,7 +108,7 @@ body {
   color: #e50914;
 }
 
-/* Banner */
+/* ---------- BANNER ---------- */
 .banner-slider {
   position: relative;
   width: 100%;
@@ -136,7 +138,7 @@ body {
   z-index: 1;
 }
 
-/* Danh sách phim */
+/* ---------- DANH SÁCH PHIM ---------- */
 .movie-list {
   padding: 40px 50px;
 }
@@ -208,7 +210,7 @@ body {
   background-color: #e50914;
 }
 
-/* Popup chi tiết phim */
+/* ---------- POPUP ---------- */
 .popup {
   position: fixed;
   top: 0;
@@ -220,6 +222,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow: auto;
 }
 
 .popup-content {
@@ -240,7 +243,7 @@ body {
   font-size: 16px;
 }
 
-/* Footer */
+/* ---------- FOOTER ---------- */
 #footer {
   background-color: #1c1c1c;
   color: white;
@@ -257,10 +260,10 @@ body {
   padding: 4px 0;
 }
 
-/* Khung chứa iframe */
+/* ---------- KHUNG IFRAME ---------- */
 #content-2 {
   width: 100%;
-  height: calc(100vh - 160px); /* Trừ header + footer */
+  height: 2100px;
 }
 
 #content-2 iframe {
@@ -269,6 +272,8 @@ body {
   border: none;
   display: block;
 }
+
+/* ---------- ƯU ĐÃI ---------- */
 .uudai-container {
   padding: 40px 50px;
 }
@@ -303,4 +308,93 @@ body {
 .uudai-item p {
   font-size: 16px;
   color: #555;
+}
+
+/* ---------- RESPONSIVE ---------- */
+/* Mobile (≤767px) */
+@media (max-width: 767px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .Action ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box,
+  .search-box input {
+    width: 100%;
+  }
+
+  #footer table {
+    font-size: 14px;
+  }
+
+  .banner-slider {
+    height: 200px;
+  }
+
+  .movies {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-item {
+    width: 90%;
+  }
+
+  .uudai-container {
+    padding: 20px;
+  }
+}
+
+/* Tablet (768px – 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner-slider {
+    height: 300px;
+  }
+
+  .movie-item {
+    width: 45%;
+  }
+
+  .uudai-container {
+    padding: 30px 40px;
+  }
+}
+
+/* Small laptop (1025px – 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .banner-slider {
+    height: 350px;
+  }
+
+  .movie-item {
+    width: 280px;
+  }
+}
+.movie-toggle {
+  text-align: center;
+  margin: 20px 0;
+}
+.movie-toggle button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+.movie-toggle button.active {
+  background-color: #e50914;
+  color: white;
 }

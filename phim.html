@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>PHIM</title>
+</head>
+<body>
+    <main>
+      <div class="movie-toggle">
+        <button id="btn-dangchieu" class="active">Phim Đang Chiếu</button>
+        <button id="btn-sapchieu">Phim Sắp Chiếu</button>
+      </div>
+      <section id="dangchieu" class="movie-list">
+        <h2>PHIM ĐANG CHIẾU</h2>
+        <div class="movies">
+          <div class="movie-item">
+            <img src="./image/latmat8.jpg" alt="Lật Mặt 8" />
+            <h3>Lật Mặt 8: Tấm Vé Định Mệnh</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="./image/tham-tu-kien.jpg" alt="Thám Tử Kiên" />
+            <h3>Thám Tử Kiên</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="./image/gia-tai-cua-ngoai.jpg" alt="Gia Tài Của Ngoại" />
+            <h3>Gia Tài Của Ngoại</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="./image/nhung-ga-trai-hu.jpg" alt="Những Gã Trai Hư" />
+            <h3>Những Gã Trai Hư: Chơi Hay Bị Xơi</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="./image/linh-hon-vu-nu.jpg" alt="Linh Hồn Vũ Nữ 2" />
+            <h3>Linh Hồn Vũ Nữ 2: Nghi Thức Hồi Sinh</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="./image/mong-vuot.jpg" alt="Móng Vuốt" />
+            <h3>Móng Vuốt</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section id="sapchieu" class="movie-list" style="display: none;">
+        <h2>PHIM SẮP CHIẾU</h2>
+        <div class="movies">
+          <div class="movie-item">
+            <img src="./image/harry-potter.jpg" alt="Harry Potter" />
+            <h3>Harry Potter Và Đứa Trẻ Bị Nguyền</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="./image/tavengers-secret-wars.jpg" alt="Avengers" />
+            <h3>Avengers: Secret Wars</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="./image/inside-out-2.jpg" alt="Inside Out 2" />
+            <h3>Inside Out 2</h3>
+            <div class="movie-buttons">
+              <button class="btn-detail">Chi tiết</button>
+              <a href="datve.html" class="btn-book" target="frame_content">Đặt vé</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="popup-detail" class="popup">
+        <div class="popup-content">
+          <h3 id="popup-title">Chi tiết phim</h3>
+          <p id="popup-description">Mô tả chi tiết phim...</p>
+        </div>
+      </div>
+      </main>
+    
+      <script src="./js/phim.js"></script>
+</body>
+</html>
