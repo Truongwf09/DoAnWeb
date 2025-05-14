@@ -82,28 +82,4 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Một trong các phần tử chi tiết phim hoặc popup không tồn tại.");
   }
 
-  // Chuyển đổi giữa các phim Đang chiếu và Sắp chiếu
-  const btnDangChieu = document.getElementById("btn-dangchieu");
-  const btnSapChieu = document.getElementById("btn-sapchieu");
-  const sectionDangChieu = document.getElementById("dangchieu");
-  const sectionSapChieu = document.getElementById("sapchieu");
-
-  // Kiểm tra phần tử chuyển đổi phim
-  if (btnDangChieu && btnSapChieu && sectionDangChieu && sectionSapChieu) {
-    btnDangChieu.addEventListener("click", () => {
-      sectionDangChieu.style.display = "block";
-      sectionSapChieu.style.display = "none";
-      btnDangChieu.classList.add("active");
-      btnSapChieu.classList.remove("active");
-    });
-
-    btnSapChieu.addEventListener("click", () => {
-      sectionDangChieu.style.display = "none";
-      sectionSapChieu.style.display = "block";
-      btnDangChieu.classList.remove("active");
-      btnSapChieu.classList.add("active");
-    });
-  } else {
-    console.error("Các nút chuyển đổi phim hoặc các phần tử không tồn tại.");
-  }
 });

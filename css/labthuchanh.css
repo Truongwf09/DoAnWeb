@@ -1,0 +1,126 @@
+/* Reset mặc định trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cấu hình nền và font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Container cho từng lab */
+.lab {
+    background: #fff;
+    border-left: 5px solid #007BFF;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Tiêu đề Lab */
+.lab h1 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+/* Danh sách liên kết bài */
+.lab li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.lab a {
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lab a:hover {
+    background: #007BFF;
+    color: #fff;
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Lab container */
+.lab {
+    background-color: #fff;
+    border-left: 5px solid #007BFF;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Lab heading */
+.lab h1 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+/* List & links */
+.lab li {
+    list-style: none;
+    margin: 6px 0;
+}
+
+.lab a {
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lab a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .lab {
+        padding: 12px 15px;
+    }
+
+    .lab h1 {
+        font-size: 1.2rem;
+    }
+
+    .lab a {
+        font-size: 0.95rem;
+        padding: 5px 10px;
+    }
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BookStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@600&family=Kanit&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="path/to/fork-awesome/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <div id="container">
+      <form name="FormThemSP" action="./xl_lab03_bai3.php" method="post" enctype="multipart/form-data">
+          <table width="100%" border="0">
+            <tr>
+              <td colspan="2" align="center"><b>THÊM SẢN PHẨM MỚI</b></td></tr>
+           
+
+            <tr>
+              <td>Mã Sản Phẩm</td>
+              <td><input type="text" name="nmProID" size ="30" value="49181802"></td>
+            </tr>
+
+            <tr>
+              <td>Tên Sản Phẩm</td>
+              <td><input type="text" name="nmProName" size="30" value="Oxford Advenced Learn"></td>
+            </tr>
+
+            <tr>
+              <td>Hình Ảnh</td>
+              <td><input type="file" name="nmProImg" size="50"></td>
+            </tr>
+
+            <tr>
+              <td>Hãng Sản Xuất</td>
+              <td>
+                <select name="nmMan">
+                  <option value="Thienlong">Chọn Hãng Sản Xuất</option>
+                  <option value="ThienLong">Thiên Long</option>
+                  <option value="deli">Deli</option>
+                  <option value="klong">KLong</option>
+                  <option value="lazybox">Lazy Box</option>
+                  <option value="m&g">M&G</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Kích Thước</td>
+              <td>
+                W:<input type="text" name="nmWidth" value="200"> 
+                H:<input type="text" name="nmHeight" value="300">mm
+              </td>
+            </tr>
+
+            <tr>
+              <td>Số Trang</td>
+              <td><input type="text" name="nmCount" value="1200"> Trang</td>
+            </tr>
+
+            <tr>
+              <td>Tác Giả</td>   
+              <td><input type="text" name="nmTacGia" value="English Corpus"></td>
+            </tr>
+           
+            <tr>
+              <td>Giá</td>
+              <td>
+                <input type="text" name="nmPrice" value="517.000">
+                 Màu: <input type="color" name="nmColor">
+              </td>
+            </tr>
+
+            <tr>
+              <td>Xuất Xứ</td>
+              <td><input type="text" name="nmLive" size="30" value="Không Có"></td>
+            
+            </tr>
+
+            <tr>
+              <td>Thể Loại</td>
+              <td>
+                <table width="388px" >
+                  <tr>
+                    <td><input type="checkbox" name="nmFunctions[]" id="van_hoc" value="Văn Học">Văn Học</td>
+                    <td><input type="checkbox" name="nmFunctions[]" id="thieu_nhi" value="Thiếu Nhi">Thiếu Nhi</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="nmFunctions[]" id="kinh_te" value="Kinh Tế">Kinh Tế</td>
+                    <td><input type="checkbox" name="nmFunctions[]" id="giao_khao" value="Giáo Khoa">Giáo Khoa</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="nmFunctions[]" id="tam_ly" value="Tâm Lý">Tâm Lý</td>
+                    <td><input type="checkbox" name="nmFunctions[]" id="ngoai_ngu" value="Ngoại Ngữ">Ngoại Ngữ</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Mô Tả Chi Tiết</td>
+              <td>
+                <textarea name="nmProDet" id="nmDes" rows="4" cols="50" style=" resize: none; width:300px ;"
+                 placeholder="Mô Tả Về Sản Phẩm">Paperback - 10th Edition (With 1 Year's Access To Both Premium Online And App)
+              </textarea>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" align="center">
+                <br/><input type="submit" name="nmSubmit" value="Thêm" /> 
+                <input type="reset" name="nmReset" value="Xóa" /> 
+              </td>
+            </tr>
+
+          </table>
+      </form>
+    </div>
+    
+</body>
+
+</html>
