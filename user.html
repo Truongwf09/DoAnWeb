@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập User</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background: #fff;
+      padding: 32px 28px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background: #00bcd4;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login-container button:hover {
+      background: #0097a7;
+    }
+    .login-container .error {
+      color: red;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Đăng nhập User</h2>
+    <form id="loginForm" autocomplete="off" novalidate>
+  <label for="username">Tên đăng nhập</label>
+  <input type="text" id="username" name="username" required minlength="4" maxlength="20" pattern="^[a-zA-Z0-9_]+$">
+  <label for="password">Mật khẩu</label>
+  <input type="password" id="password" name="password" required minlength="6" maxlength="20">
+  <div class="error" id="errorMsg"></div>
+  <button type="submit">Đăng nhập</button>
+  
+</form>
+  </div>
+  <script>
+    document.getElementById('loginForm').onsubmit = function(e) {
+      e.preventDefault();
+      var username = document.getElementById('username').value.trim();
+      var password = document.getElementById('password').value.trim();
+      var errorMsg = document.getElementById('errorMsg');
+      // Ràng buộc: không được để trống, username chỉ chữ/số/_ và độ dài hợp lệ
+      if (!username || !password) {
+        errorMsg.textContent = "Vui lòng nhập đầy đủ thông tin!";
+        return;
+      }
+      if (!/^[a-zA-Z0-9_]{4,20}$/.test(username)) {
+        errorMsg.textContent = "Tên đăng nhập chỉ gồm chữ, số, dấu gạch dưới (4-20 ký tự)!";
+        return;
+      }
+      if (password.length < 6 || password.length > 20) {
+        errorMsg.textContent = "Mật khẩu phải từ 6 đến 20 ký tự!";
+        return;
+      }
+      // Demo: tài khoản user/user123
+      if(username === "user" && password === "user123") {
+        localStorage.setItem("userLoggedIn", "1");
+        localStorage.setItem("username", username);
+        window.location.href = "index.html";
+      } else {
+        errorMsg.textContent = "Sai tên đăng nhập hoặc mật khẩu!";
+      }
+    };
+  </script>
+</body>
+</html>
